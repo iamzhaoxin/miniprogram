@@ -1,0 +1,145 @@
+init{
+    data{
+        id:id
+    }
+    res{
+        //date: date xx-xx-xx-xxx
+        mon_income：double
+        mon_outcome：double
+        left：double
+    }
+}
+
+data{
+    data{
+        id:id
+    }
+    res{
+        struct{
+            kind：string//交通、购物
+            tip:    string
+            money: double//+-
+        }[3]
+    }
+}
+
+search{
+    data
+        money:double
+    }
+    res{
+        struct{
+            date:date
+            tip:string
+            money:double
+        }[]
+    }
+}
+
+add{//记账
+    data{
+        tab:int//支出、收入
+        kind:string
+        tip:string//备注
+        money:double
+        date:date
+    }
+    res{
+        success
+    }
+}
+
+
+init_me{
+    data{
+        id:id
+    }
+    res{
+        image: image
+        name:name
+        length:int  // 记账天数
+
+        left:double
+        mon_income:double
+        mon_outcome：double
+        budget:double//预算
+
+        date:date
+        bool:[7] // 0 0 0 1 1 1 0 7天内的记账状态
+        //日历拓展
+    }
+}
+
+out_init_data{
+    data{
+        id:id
+    }
+    res{
+        //画图参数
+
+        week_outcome:double
+        average:double
+        day_outcome[7]:double
+    }
+}
+
+out_month{
+    data{
+        id:id
+    }
+    res{
+        mon_outcome：double
+        average:double
+        week_outcome[4]:double
+    }
+}
+
+out_year{
+    data{
+        id:id
+    }
+    res{
+        year_outcome:double
+        average:double
+        month_outcome[12]:double
+    }
+}
+
+//自定义
+
+in_init_data{
+    data{
+        id:id
+    }
+    res{
+        //画图参数
+
+        week_income:double
+        average:double
+        day_income[7]:double
+    }
+}
+
+in_month{
+    data{
+        id:id
+    }
+    res{
+        mon_income：double
+        average:double
+        week_income[4]:double
+    }
+}
+
+in_year{
+    data{
+        id:id
+    }
+    res{
+        year_income:double
+        average:double
+        month_income[12]:double
+    }
+}
+
+//设置
