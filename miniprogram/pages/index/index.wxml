@@ -1,5 +1,17 @@
 <!--index.wxml-->
 <view class="container">
-<button bindtap="addDate">测试</button>
+
+  <view >
+  <!--用bindinput或bindsubmit都可吧-->
+    <input type='text' bindinput='get_money' name='money' placeholder="输入金额"></input>
+    <button bindtap="addData">插入数据</button>
+  </view>
+
+  <view>
+    <text>输入的内容x2=:{{output}}\n</text>
+  </view>
+
+
+    
 
 </view>
