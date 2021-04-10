@@ -38,7 +38,7 @@
     "minifyWXSS": true
   },
   "projectname": "%E8%AE%B0%E8%B4%A6",
-  "libVersion": "2.0.4",
+  "libVersion": "2.16.0",
   "appid": "wx15cd1a52b1e47e3f",
   "condition": {
     "search": {

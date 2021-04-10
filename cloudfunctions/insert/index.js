@@ -14,7 +14,7 @@ exports.main = async (event, context) => {
         money: event.money,
       }
     })
-    return "okkk"
+    return event.money*2
   } catch (e) {
     console.log(e)
   }
